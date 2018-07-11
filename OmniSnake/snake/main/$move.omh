@@ -1,0 +1,6 @@
+If iPartList.$linecount>1
+	For lFor from iPartList.$linecount to 2 step -1
+		Calculate [iPartList.[lFor].lChar].$left as [iPartList.[lFor-1].lChar].$left
+		Calculate [iPartList.[lFor].lChar].$top as [iPartList.[lFor-1].lChar].$top
+	End For
+End If

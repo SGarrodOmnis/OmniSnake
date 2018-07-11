@@ -1,0 +1,5 @@
+For lFor from 2 to iPartList.$linecount step 1
+	Do $cwind.$bobjs.$remove([iPartList.[lFor].lChar])
+End For
+Calculate [iPartList.1.lChar].$left as 288
+Calculate [iPartList.1.lChar].$top as 192

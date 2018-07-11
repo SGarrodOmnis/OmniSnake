@@ -1,0 +1,45 @@
+Calculate iLocationY as $cwind.$bobjs.1016.$top
+Calculate iLocationX as $cwind.$bobjs.1016.$left
+Switch iDirection
+	Case 'up'
+		Calculate iLocationY as $cwind.$bobjs.1016.$top-32
+		If iLocationY<0
+			Do method $ded (1)
+		End If
+		For lFor from 4 to iPartList.$linecount step 1
+			If iLocationX=[iPartList.[lFor].lChar].$left&iLocationY=[iPartList.[lFor].lChar].$top
+				Do method $ded
+			End If
+		End For
+	Case 'down'
+		Calculate iLocationY as $cwind.$bobjs.1016.$top+32
+		If iLocationY>449
+			Do method $ded (1)
+		End If
+		For lFor from 4 to iPartList.$linecount step 1
+			If iLocationX=[iPartList.[lFor].lChar].$left&iLocationY=[iPartList.[lFor].lChar].$top
+				Do method $ded
+			End If
+		End For
+	Case 'left'
+		Calculate iLocationX as $cwind.$bobjs.1016.$left-32
+		If iLocationX<0
+			Do method $ded (1)
+		End If
+		For lFor from 4 to iPartList.$linecount step 1
+			If iLocationX=[iPartList.[lFor].lChar].$left&iLocationY=[iPartList.[lFor].lChar].$top
+				Do method $ded
+			End If
+		End For
+	Case 'right'
+		Calculate iLocationX as $cwind.$bobjs.1016.$left+32
+		If iLocationX>609
+			Do method $ded (1)
+		End If
+		For lFor from 4 to iPartList.$linecount step 1
+			If iLocationX=[iPartList.[lFor].lChar].$left&iLocationY=[iPartList.[lFor].lChar].$top
+				Do method $ded
+			End If
+		End For
+End Switch
+Do method $eat (iLocationX,iLocationY)

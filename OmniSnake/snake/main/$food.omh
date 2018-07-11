@@ -1,0 +1,23 @@
+While iFood=kFalse
+	Calculate lPass as 0
+	Calculate lX as randintrng(0,19)*32
+	Calculate lY as randintrng(0,14)*32
+	For lFor from 1 to iPartList.$linecount step 1
+		If lX=[iPartList.[lFor].lChar].$left&lY=[iPartList.[lFor].lChar].$top
+		Else
+			Calculate lPass as lPass+1
+		End If
+	End For
+	If lPass=iPartList.$linecount
+		If lX=iLocationX&lY=iLocationY
+			
+		Else
+			Calculate $cwind.$bobjs.1020.$left as lX
+			Calculate $cwind.$bobjs.1020.$top as lY
+			Calculate iFood as kTrue
+			Calculate iEntry as con('X',lX,' Y',lY)
+			Do $cwind.$objs.main_entry_1017.$redraw()
+		End If
+	End If
+	
+End While

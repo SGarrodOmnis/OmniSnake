@@ -1,0 +1,18 @@
+;  Enter your initialization code here
+Calculate $cwind.$title as con('High Score = ',iHighScore,'  Current score = 0')
+Calculate $cwind.$bobjs.1016.$visible as kTrue
+Calculate $cwind.$bobjs.1022.$visible as kFalse
+Calculate iAlive as kTrue
+Calculate iDirection as 'right'
+Calculate iLength as 1
+
+Set reference iEnd to $cwind.$bobjs.1016
+Set reference iOriginRef to $cwind.$bobjs.1016
+
+Do iPartList.$define(lChar)
+Do iPartList.$add('$cwind.$bobjs.1016')
+
+Do iTimer.$useseconds.$assign(kFalse)
+Do iTimer.$timervalue.$assign(50)
+Do iTimer.$repeat.$assign(kFalse)
+Do iTimer.$starttimer()

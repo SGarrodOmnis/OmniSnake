@@ -1,0 +1,6 @@
+If pLocationX=$cwind.$bobjs.1020.$left&pLocationY=$cwind.$bobjs.1020.$top
+	Do method $grow
+	Calculate iFood as kFalse
+	Do method $food
+	Calculate $cwind.$title as con('High Score = ',iHighScore,'  Current score = ',iLength-5)
+End If

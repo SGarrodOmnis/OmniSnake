@@ -1,0 +1,13 @@
+Do $cwind.$bobjs.$addafter([iPartList.[iPartList.$linecount].lChar],kRoundrect,[iPartList.[iPartList.$linecount].lChar].$top,[iPartList.[iPartList.$linecount].lChar].$left,32,32) Returns lRef
+Calculate iLength as iLength+1
+Calculate lIdent as lRef.$name
+Calculate lChar as con('$cwind.$bobjs.',lIdent)
+Do iPartList.$add(lChar)
+Do [iPartList.[iPartList.$linecount].lChar].$backpattern.$assign(kPat14)
+If iLength<50
+	Do [iPartList.[iPartList.$linecount].lChar].$backcolor.$assign(rgb(0,100-iLength*2,0))
+Else
+	Do [iPartList.[iPartList.$linecount].lChar].$backcolor.$assign(rgb(0,0,0))
+End If
+Do [iPartList.[iPartList.$linecount].lChar].$forecolor.$assign(rgb(170,170,0))
+Do [iPartList.[iPartList.$linecount].lChar].$linestyle.$assign(kLineNone)

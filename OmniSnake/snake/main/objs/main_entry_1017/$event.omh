@@ -1,0 +1,33 @@
+On evKey
+	Switch pSystemKey
+		Case kUp
+			If iLastMove='down'
+			Else
+				Calculate iDirection as 'up'
+			End If
+		Case kDown
+			If iLastMove='up'
+			Else
+				Calculate iDirection as 'down'
+			End If
+		Case kLeft
+			If iLastMove='right'
+			Else
+				Calculate iDirection as 'left'
+			End If
+		Case kRight
+			If iLastMove='left'
+			Else
+				Calculate iDirection as 'right'
+			End If
+	End Switch
+	If pKey=' '
+		If iAlive=kTrue
+		Else
+			If iPartList.$linecount>0
+				Do method $clear
+			End If
+			Do method $start
+		End If
+	End If
+	;  Do sleep(20)

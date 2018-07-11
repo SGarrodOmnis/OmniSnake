@@ -1,0 +1,12 @@
+Calculate iAlive as kFalse
+Do iTimer.$stoptimer()
+If iLength-5>iHighScore
+	Calculate iHighScore as iLength-5
+	OK message "YOU'RE NUMBER 1!" {Score: [iLength-5]}
+Else If not(isclear(pDied))
+	OK message "You gon dun hit a wall ya goofus" {Score: [iLength-5]}
+Else
+	OK message "Don't eat yourself silly billy" {Score: [iLength-5]}
+End If
+Calculate $cwind.$bobjs.1022.$visible as kTrue
+Calculate iFood as kFalse

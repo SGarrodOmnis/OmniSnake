@@ -1,0 +1,42 @@
+{
+	"classtype": "kTask",
+	"internalversion": 10,
+	"tvardefs": [
+		{
+			"name": "tAlive",
+			"order": 1,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "tDirection",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'right'"
+		}
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2018-07-06 15:17:30",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": false,
+		"issupercomponent": false,
+		"moddate": "2018-07-10 16:53:47",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	}
+}

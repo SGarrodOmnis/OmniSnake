@@ -1,0 +1,28 @@
+Do method $dedcheck
+While iAlive
+	Do method $food
+	Do method $move
+	Switch iDirection
+		Case 'up'
+			Do method $up
+		Case 'down'
+			Do method $down
+		Case 'left'
+			Do method $left
+		Case 'right'
+			Do method $right
+	End Switch
+	If iLength<5
+		Do method $grow
+	End If
+	Calculate iLastMove as iDirection
+	If $cwind.$bobjs.1016.$left>609|$cwind.$bobjs.1016.$top>479|$cwind.$bobjs.1016.$left<0|$cwind.$bobjs.1016.$top<0
+		;  Calculate iAlive as kFalse
+		;  Do iTimer.$stoptimer()
+		Do method $ded
+	Else
+		Do iTimer.$starttimer()
+		Quit method
+	End If
+	Do $cwind.$redraw()
+End While

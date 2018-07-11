@@ -1,0 +1,27 @@
+{
+	"ident": 1022,
+	"order": 16387,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kCenterJst",
+		"backcolor": "RGB(0,68,0)",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "",
+		"font": 5,
+		"fontsize": 50,
+		"fontstyle": "kPlain",
+		"forecolor": "RGB(0,170,0)",
+		"height": 81,
+		"left": 75,
+		"objlink": 0,
+		"text": "Press SPACE to start",
+		"textcolor": "kColorWindowText",
+		"top": 77,
+		"userinfo": "",
+		"vertcentertext": true,
+		"visible": true,
+		"width": 486
+	}
+}
